@@ -243,3 +243,38 @@ print(" /\n/\\/\n\\/\\\n \\")
 print("\n")
 #fish2
 print("  _\n /_|\n('_)<|\n \\_|")
+
+---KOŞUL VE KARŞILAŞTIRMA OPERATÖRLERİ---
+KOŞUL İFADELERİ
+koşul içerisindeki verilerin birbiriyle karşılaştırılmasında kullanılır.
+if : Tek koşula bağlı gerçekleşecek işlemler için
+if else: Çift koşula bağlı gerçekleşecek işlemler için
+if elif else: Çoklu koşula bağlı gerçekleşecek işlemler için
+
+BOOLEAN İFADELERİ
+sonuç doğru ise true, yanlış ise false değerini üretirler
+== : eşittir
+!= :eşit değildir
+>  : büyüktür
+<  : küçüktür
+>= :büyük eşittir
+<= :küçük eşittir
+
+MANTIKSAL OPERATÖRLER
+mantıksal VE: and operatörü(bütün koşullar doğruysa doğru)
+mantıksal VEYA: or operatörü(koşullardan herhangi birisi doğruysa doğru)
+değili NOT: doğruysa yanlış, yanlışsa doğru döndürür.
+
+İF KOMUTU
+-if komutu kullanılırken şart ifadesi parantez içinde yazılmadı ve koşulun sonuna : koyuldu
+if 5==5: #şeklinde bir if bloğu oluşturuldu.
+	print(eşittir)
+-if else komutu
+a=25
+b=int(input("guess the number"))
+if a==b:
+    print("you are right:)")
+else:
+    print("you are wrong:(")
+burada önemli nokta if ve else koşul ifadelerinden sonra : koymanın zorunlu olmasıdır. bunu koymadığımız takdirde hata ile karşılaşırız.
+
