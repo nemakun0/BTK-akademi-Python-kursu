@@ -101,3 +101,109 @@ türkçe anlamıyla söz dizimi, çeşitli sembol
 kombinasyonlarının ne anlama geldiğini tanımlar.
 yazılım dillerinde insan diline yakın olan dillere yüksek seviyeli diller,
 makine diline yakın olan dillere düşük seviyeli diller denir.
+
+DEĞİŞKENLER
+Değisken: bilgisayar biliminde, niceliğin depolanabileceği bir yer, alan ifade eder
+matematiksel vey asözel değerler alabilirler. bir değişkene değer atamak için =(atama) operatörü kullanılır.
+sol tarafta yazılan yeni değer alacak olan değişkendir sağdaki de ona veriecek olan değerdir.
+örnek:
+a = 8
+print (a)
+b = 2
+print (b)
+a = b
+print(a)
+şeklindeki bir kod bloğunda a ve b ye farklı değerler verilerek değişkenler tanımlandı son kısımda ise b'nin değeri a'ya atandı.
+bu şekilde son kısımda a'nın değeri 2 'ye eşit oldu.
+
+DEĞİŞKEN İSİMLENDİRME KURALLARI
+1. Kural:
+Bir değişken isminin ilk karakteri ya harf
+ya da alt çizgi '_' olmalıdır. sayı olmamalıdır.
+2. Kural:
+Bir değişken ismi içerisinde alt çizgi '_
+hariç boşluk veya diğer özel karakterler
+bulunmamalıdır.(boşluk, nokta, virgül, parantez vb.)
+3. Kural:
+Bir değişken ismi bir python komutu
+olamaz.
+bunların neler olduğunu görmek için python'da şu komutlar kullanılır;
+import keyword
+keyword.kwlist
+burada çıkan kelimelri değişken adı olarak kullanamayız.
+4. Kural:
+Bir değişken isimlerinde türkçe karakter
+kullanmamalıyız.
+5. Kural:
+Bir degisken küçük harf ile
+isimlendirildiyse ayni harfin büyügü ile
+farkli bir degisken olusturulabilir. Bu
+duruma dikkat edilmelidir.
+
+DEĞİŞKENLERİ BİRBİRİNE AKTARMA
+a= 3
+b= 4 olsun şimdi a ile b nin değerlerini değiştirmek için pythonda kısayol bulunur 
+a,b=b,a şeklinde a'nın içeriği b'ye, b'nin içeri a'ya aktarılır.
+bu string değişkenler için de geçerlidir
+
+DEĞİŞKENİN BAŞLANGIÇ DEĞERİ
+bir değişkeni tanımlarken bir başlangıç değeri vermektir.
+örnek olarak bir iş için para topladığımızı düşünel,m bu toplanan paralar bir kutuda toplanacak olursa bizim bir çok kişiden çıkan para bu kotuya konulur ve en son kutudaki paralar sayıldığında bu bizim verdiğimiz paraların toplamı olmayabilir çünkü kutunun başlangıçtaboş olup olmadığını bilmiyordum bunun için başlangıçta bu kutunun boş olduğunu göstermek için bir başlangıç değeri atamalıyız.
+
+OPERATÖRLER
++ : toplama
+- : çıkarma
+* : çarpma 
+/ : bölme
+//: tam sayı olmayan bölmelerde sadece tam kısmını ekrana yazdırır
+**: üs alma
+% : mod bölme işleminden kalan
+
+İŞLEM ÖNCELİĞİ
+işlem önceliği büyükten küçüğe sıralama;
+parantez içi
+üs almaçarpma
+bölme
+mod
+toplama
+çıkarma
+
+DEĞER ATAMA İŞLEMLERİ
+cep=0
+cep=cep+10
+print(cep)
+# (diyez) işareti pythonda tek satırlık yorum satırı için kullanılır.
+#yukarıdaki işlemi daha kısa şekilde yazmak için += kullanılabilir.
+# += sağdaki ifadeyi solda bulunan değerle topla değişkene ata
+# -= sağdaki ifadeyi solda bulunan değerden çıkar değişkene ata
+# bu işlemi bütün operatörlerde kullanabiliriz.
+cep+=10 
+print(cep)
+
+VERİ TİPLERİ
+int : tamsayı veri tipi
+float : ondalık sayı veri tipi
+bool : doğru-yanlış veri tipi
+str : karakter veri tipi(tek tırnak veya çift tırnak ile kullanılabilir + operatörü ile birleştirilebilir.)
+bir değişkenin hangi veri tipinde olduğunu sorabiliriz bunu için kullanılan kod;
+a=4.5
+type(a)
+dediğimde bana 
+<class 'float'>
+şeklinde geri dönüş yapacak
+= atama operatörü
+== ise karşılaştırma operatörü
+
+VERİ TİPİ DÖNÜŞÜMLERİ
+(int)(9.60)
+9
+şeklinde çıktı verecektir
+int ifadesi parantez içinde olmak zorunda değil
+int(4.5)
+4 şekline sonuç verir
+bu şekilde diğer veri tiplerine de dönüştürülebilir.
+str(4)+str(4) kodunun çıktısı 4 ile 4'ün yan yana yazılması şeklinde olur
+'44' şeklinde çıktı alırız.
+
+YORUM SATIRLARI
+# yorum satırı koymak için kullanılır. tek satırlık yorum satırı yazılabilir bununla
