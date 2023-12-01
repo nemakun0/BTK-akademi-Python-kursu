@@ -1,0 +1,103 @@
+PROGRAM
+Bilgisayar programı, bilgisayara
+belirli bir işlemi ya da işlemleri
+gerçekleştirebilmesi için verilen
+komut ya da komutlar bütünüdür
+
+PROGRAMLAMA DİLİ
+Programlama dili, yazılımcının bir
+algoritmayı ifade etmek amacıyla,
+bir bilgisayara ne yapmasını istediğini
+anlatmasının tektipleştirilmiş
+yoludur.
+
+Derleyiciler kaynak kodları makine koduna derleme
+görevine hizmet eden yazılımlardır. Bir programlama
+dilinin derleyicisi, o programlama dili kullanılarak
+yazılmış olan kodu hedef işlemci mimarisine göre
+uygun şekilde makine koduna derler ve genellikle çıktı
+olarak yurutulebilir dosyasının elde edilmesini sağląr.
+Fortran, C, C++, C#, Pascal, Delphi, Pic Basic Pro gibi
+diller derleyici kullanırlar.
+
+Yorumlayıcı, yazılımı kısım kısım ele alarak doğrudan
+çalıştırır. Yorumlayıcılar standart bir çalıştırılabilir kod
+üretmezler. Yorumlama işlemi aşama aşama
+yapılmadığı için genellikle ilk hatanın bulunduğu yerde
+programin çalışması kesilir.
+Python, Ruby, Java, Lisp, BASIC, AWK,PHP gibi diller
+yorumlayıcı kullanırlar.
+
+KAYNAK PROGRAM (SOURCE CODE)
+Herhangi bir yazılımın işlenip makine diline
+çevrilmeden önce insanların okuyup üzerinde
+çalışabildiği programlama diliyle yazılmış halidir.
+
+EDİTÖR NEDİR?
+Kaynak kodu düzenleyicisi, bilgisayar
+programının kaynak kodunu düzenlemek
+için özel olarak tasarlanmış bir metin
+düzenleyici programıdır. Bağımsız bir
+uygulama olabileceği gibi bir tümleşik
+geliştirme ortamı veya web tarayıcısı içine
+de yerleştirilebilir.
+
+ÇALIŞTIRILABİLİR DOSYA (EXECUTABLE FİLE)
+Bir programlama dilinde yazılmış kaynak programın
+derlenmesi ile elde edilen, makine diline dönüştürülmüş
+ve çalışmaya hazır programa denir. Bu dosyaların
+Windows, MS-DOS tabanlı sistemlerdeki dosya
+uzantısı .exe'dir.
+
+PYTHON
+Python, nesne tabanlı,
+yorumlamalı, birimsel ve etkileşimli
+yüksek seviyeli bir programlama
+dilidir. Girintilere dayalı basit söz
+dizimi, dilin öğrenilmesini ve akılda
+kalmasını kolaylaştırır.
+Guido van Rossum, Hollandalı
+bir bilgisayar programcısıdır.
+Python programlama dilinin
+yazarıdır.
+Python programlama dili ile şunlar yapılabilir:
+Web sitesi geliştirme
+Oyun tasarımı
+Robotik uygulamalar
+Veri analizi
+Makine öğrenimi uygulamaları
+Yapay zeka uygulamaları
+Tarayıcı web uygulama otomasyonu
+Programların işlevselliğini arttırmak
+Hesaplama yapma
+Çekiliş uygulaması hazırlama
+Sözlük oluşturma
+Sosyal medya uygulamaları
+
+IDLE NEDİR ?
+Her Python kurulumu, IDLE ve hatta IDE olarak
+kısaltılmış olarak göreceğiniz bir Entegre Geliştirme
+ve Öğrenme Ortamı ile birlikte gelir. Bunlar, daha
+verimli kod yazmanıza yardımcı olan bir uygulama
+sınıfıdır. Aralarından seçim yapabileceğiniz pek çok
+IDE olmasına rağmen, Python IDLE oldukça basittir,
+bu da onu yeni başlayan bir programcı için
+mükemmel bir araç haline getirir.
+
+www.python.org sitesinden pythonın son sürümünü indirip kurabilirsin.
+
+ IDLE kullanırken shell programlama dediğimiz kısımla karşılaşıyoruz.
+ burada kısa ölçekli kodlar yazabiliriz ancak bu kodlar kaydedilmez ve anlık çıktı verir.
+ biz uzun ve kaydedilebilir dosyalar kullanmayı tercih edeceğiz.
+ bunun için sol üstte bulunan file kısmından new file'a basarak yeni bir dosya oluşturabiliriz.
+ yazdığımız kodları kaydetmek için yine file kısmındam save'e basabiliriz veya kısayol olarak ctrl+s yapabiliriz.
+ IDLE içinde önceden yazdığım kodları tekrar düzenlemek istersek file'a gelip open kısmından doasy akonumuna gidip kodalrı tekrar bu ekrana getirtebiliriz.
+ yazdığımı zkodları çalıştırmak için kod yazdığım ekranda bulunan run kısmına gelip(en üstte) run module'e basabilir veya kısayol olarak f5 kullanabiliriz.
+ bu işlem programı kabuk ekranda çalıştırır.
+ 
+SYNTAX (SÖZDİZİMİ)
+Programlama dillerinde de bulunan Syntax yani
+türkçe anlamıyla söz dizimi, çeşitli sembol
+kombinasyonlarının ne anlama geldiğini tanımlar.
+yazılım dillerinde insan diline yakın olan dillere yüksek seviyeli diller,
+makine diline yakın olan dillere düşük seviyeli diller denir.
