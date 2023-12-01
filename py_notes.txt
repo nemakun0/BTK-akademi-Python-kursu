@@ -278,3 +278,86 @@ else:
     print("you are wrong:(")
 burada önemli nokta if ve else koşul ifadelerinden sonra : koymanın zorunlu olmasıdır. bunu koymadığımız takdirde hata ile karşılaşırız.
 
+---DÖNGÜLER---
+-FOR: döngü sayısı önceden belli olan döngüler
+-WHILE: döngü sayısı önceden belli olmayıp koşula bağlıdır.
+
+liste :sıralı eleman dizisi
+liste=['ali','can','miray','zeynep']
+print(liste) bunun çıktısı:
+>>>['ali','can','miray','zeynep']
+
+liste2=[1,2,3,4,5]
+print(liste2)
+>>>[1,2,3,4,5]
+
+liste3="python"
+>>>python
+
+in: liste içinde olup olmadığını kontrol eden operatördür. olması halinde true döndürür.
+liste'yi ele alalım
+print(liste) 
+>>>['ali','can','miray','zeynep']
+print('ali' in liste)
+>>> true
+not in: listede olup olmadığını kontrol eden operatördür. olmaması halinde true döndürür.
+
+RANGE FONKSİYONU
+range(0,5):0'dan 5'e kadar sayıları yazar üst sınır dahil edilmez. 0,1,2,3,4 gibi
+range(11,6)=11,10,9,8,7 şeklinde azalarak da gidebilir
+range(1,10,2): 1'den başlasın, 10'a kadar 2'şer 2'şer gitsin.
+>>>1,3,5,7,9 şeklinde gider.
+range(15,3,-4):15'ten başlasın,3'e kadar 4'er 4'er azalarak gitsin.
+>>>15,11,7
+bunu kontrol etmek için for döngüsü kullanılabilir
+for a in range(0,5):
+	print(a)
+>>>0
+>>>1
+>>>2
+>>>3
+>>>4 
+şeklinde çıktıya sahip olur.
+
+FOR DÖNGÜSÜ
+for döngüsü belli sayıdaki işlemi gerçekleştirmek için kullanılır.
+for döngüsünün de sonuna : konulur ve döngü içine yazılacak işlemi 4 boşluk içeriden başlatmak gerekir
+1'den 30'a kadar olan tek sayıları yazdırmak istersek
+for x in range(1,30):
+	(if x%==1):
+		print(x)
+		
+
+WHILE DÖNGÜSÜ
+koşul sağlandığı sürece devam eden döngülerdir.
+örnek olarak sıfırdan farklı olduğu sürece girilen sayının karesin alan bir program yazalım 
+x=1
+print("if you want to exit please enter 0")
+while (x!=0):
+	x=int(input("please enter numberthat you want to take square"))
+	print("square of x=", x*x)
+print("goodbye:)")
+sonsuz döngü;
+print("enter 0 to exit")
+while True:
+	d =int(input("please enter number:"))
+	print("square=", d*d)
+	if(d==0):
+		break #döngüyü kırar ne olduğuna bakmaksızın döngüden çıkar.
+continue: görüldüğü yerde altındaki kodları okumadan döngünün başına döndürür.
+#yedi ve katları hariç 0'dan 100'e kadar olan sayıları yazdıran program
+for a in range(100):
+	if(a%7==0):
+		continue
+	print(a)
+
+İÇ İÇE DÖNGÜLER
+çarpım tablosu oluşturmak için bu tip döngüler kullanabiliriz
+çarpım tablosunda iki değer vardır ilk çarpan ve ikinci çarpan 
+öncelikle ilk çarpanı değiştirmek için bir for döngüsü tanımlanır ve bunun içine ikinci çarpanı değiştirmek için bir for döngüsü tanımlanır
+ilk döngü ilk değerle braber 2. döngünün içine girer ve ikinci döngü bitmeden ilk döngüden gelen değer değişemez
+for a in range(1,11):
+    for b in range(1,11):
+        print(a,"*",b,"=",a*b)
+    print("\n")
+şeklinde bir kod bloğu bulunur.
