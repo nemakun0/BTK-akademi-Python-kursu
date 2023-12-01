@@ -102,7 +102,7 @@ kombinasyonlarının ne anlama geldiğini tanımlar.
 yazılım dillerinde insan diline yakın olan dillere yüksek seviyeli diller,
 makine diline yakın olan dillere düşük seviyeli diller denir.
 
-DEĞİŞKENLER
+---DEĞİŞKENLER---
 Değisken: bilgisayar biliminde, niceliğin depolanabileceği bir yer, alan ifade eder
 matematiksel vey asözel değerler alabilirler. bir değişkene değer atamak için =(atama) operatörü kullanılır.
 sol tarafta yazılan yeni değer alacak olan değişkendir sağdaki de ona veriecek olan değerdir.
@@ -207,3 +207,39 @@ str(4)+str(4) kodunun çıktısı 4 ile 4'ün yan yana yazılması şeklinde olu
 
 YORUM SATIRLARI
 # yorum satırı koymak için kullanılır. tek satırlık yorum satırı yazılabilir bununla
+
+---VERİ İŞLEMLERİ---
+
+VERİ GİRİŞ KOMUTU
+input():kullanıcıdan veri girdisi alır. string türünde bir girdi alır.
+
+VERİ ÇIKIŞ KOMUTU
+print(): ekrana yazdırma şişlevi görür.
+sep: çıktı mesajındaki karakterler arasına ayraç koymak için kullanılır.
+print ('b','t','k')
+print ('b','t','k', sep=',')#harfleri hangi işaretle ayıracağını belirtir. burada harfleri virgüllerle ayıracak.
+print("btk"*3)#string bir ifadeyi kaç kere yazacağımız belirtir ekrana 3 defa btk yazar bitişik şekilde
+print("yaşınız", end=(''))
+#aynı print içinde iki kelimeyi alt alta yazadırmak istersek
+print("btk\nAkademi")
+#bir tab boşluk bırakmak için
+print("btk\tAkademi")
+
+FORMAT()
+print kodunun çok farklı şekillerde kullanımı vardır.
+a=5
+print("a:",a)
+print("a={0}".format(a))
+print(f"a={a}")
+print("a="+str(a)) 
+bu 4 farklı kodunda çıktısı aynıdır.
+
+PRİNT İLE ÇİZİM UYGULAMASI
+#dog face
+print(" ___\n/* *\\\n \./")
+print("\n")
+#fish1
+print(" /\n/\\/\n\\/\\\n \\")
+print("\n")
+#fish2
+print("  _\n /_|\n('_)<|\n \\_|")
