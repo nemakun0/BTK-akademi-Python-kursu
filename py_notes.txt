@@ -575,3 +575,120 @@ STRİNG İÇERİSİNDE BAŞKA STRİNG ARAMA
 "at" in "talat" #büyük küçük harf duyarlılığı vardır
 >>>true
 not in komutuyla da içinde olmayan bir ifade ile karşılaşıldığında true döndürür
+
+---DİZİLER VE İŞLEMLER---
+dizi: aynı türden elemanların oluşturduğu sıralı objelerdir
+neden kullanılır:
+5 sayı alacağımızı varsay hepsi için ayrı ayrı değişken tanımlamak çok uzun işlemlerdir bunun için dizi kullanmak daha mantıklı hal alır.
+python'da diziler listeler halinde ifade edilir. listelerin veri tipi list'dir.
+listelerin her elemanı aynı türden olmak zorunda değildir. int str aynı liste içinde bulunabilir.
+
+LİSTE ELEMANLARINA ERİŞME
+indislerle elemanlara ulaşılır 
+liste=["talat","çetin",123456,"baba"]
+liste[2]
+>>>123456
+no=liste[2]
+print(no)
+>>>123456
+
+LİSTEDEKİ BİR ELEMANIN İNDİS NOSUNU ÖĞRENME
+liste=[1,2,3,"a","2","ali"]
+liste.index(2)#liste içindeki 2 elemanı hangi indiste?
+>>>1
+liste.index("2")
+>>>4
+
+LİSTE DİLİMLEME
+L=[1,2,3,4,5,6,7,8,9]
+L[başlangıç indisi:bitiş indisi:artış miktarı]
+string ifadelerinde yaptığımız işlemler burada geçerlidir.
+
+LİSTEYE ELEMAN EKLEME
+L=[1,2,3,4,5,6]
+L.append(7)#listenin sonuna bu 7 sayısını ekler
+L.append('a')#a karakteri listenin sonuna eklenir
+eğer ben sonuna değilde araya ekleme yapmak istiyorsam insert kodu kullanırım.
+L.insert(hangi indise,ne eklencek)
+L.insert(2,9)#2. indise, 9'u ekle diğer bütün değerleri kaydırır.
+
+LİSTENİN ELEMAN SAYISINI ÖĞRENME
+len(listeAdı)
+listeAdı.count(arananİfade)
+
+İKİ LİSTEYİ BİRLEŞTİRME
+1. yöntem
+L1=[1,2,3,4,5,6]
+L2=[1,2,3,4,5,6,7,8,9]
+L3=L1+L2
+2. yöntem
+L1.extend(L2)#L1 listesinin üstüne L2 listesini ekle,
+
+LİSTEYİ TERS ÇEVİRME
+L1=[1,2,3,4,5,6]
+L[::-1] # listenin tersini yaxzar ancak lise içeriğini değiştirmez.
+L.reverse() #bu fonksiyon listeyi ters çevirip L nin içine atar.
+
+LİSTENİN EN BÜYÜK VE EN KÜÇÜK DEĞERLERİNİ BULMA
+l=[1,235,478,3658,21]
+
+STRİNGİ LİSTEYE DÖNÜŞTÜRME
+word="btkakademi"
+l=[]
+l=list(l)#bu şekilde değişken içerisindeki kelime karakterlerine ayrılarak liste içine yazıldı
+
+LİSTEDEN ELEMAN SİLME
+l.remove(silinmek istenen karakter)#parantez içine yazılan harf a olursa btkakademi deki il a harfi silinir.gerisi durur.
+tek seferde tek karakter siler.
+belli bir indisteki harfi silmek istersek;
+l.pop(kaçıncı indisi silmek istersen) bu indiste bulunan veriyi temizler
+tamamını silemk için;
+l.clear() l listesindeki bütün elemanlar silinir
+
+LİSTEDE ARAMA YAPMA
+l=[1,2,3,4,5,6,7,8]
+1 in l şeklinde arama yapabiliriz varsa true döndürür
+23 not in l bu değer listede yoksa true döndürür
+
+L=[12, 23, 45, 56, 78,89]
+deger=int (input('Sayı Giriniz.. :'))
+if deger in L:
+	indis=L.index (deger)
+	print ("Aranan", indis, "indis değerinde bulundu")
+else:
+	print ("aranan değer bulunamadı!")
+	
+LİSTE ELEMANLARINI SIRALAMA
+L=[1,25,369,78,32547]
+L.sort()#küçükten büyüğe olacak şeklilde sıralanır ve bu listenin içine kaydedilir.
+büyükten küçüğe sıralmak için listeyi ters çevirebilirz ancak bu liste içeriğini değiştirmez.
+L[::-1]
+kaydedilmesini istersek;
+L=L[::-1]
+
+ENUMARATE() FONKSİYONU
+# haftanın günleri numaralndırılmış oldu
+gun=["pazartesi","salı","çarşamba","perşembe","cuma","cumartesi","pazar"]
+for i, deger in enumarate(gun):
+	print(str(i+1)+".gün "+deger)
+
+LİSTEDEN YIĞIN OLUŞTURMA
+yığın(stack): eleman ekleme ve çıkarma işlemlerinin listenin en son elemanı üzerinden gerçekleştiği özel bir yapıdır.
+listeye son giren- ilk çıkar(last in-first out)
+liste oluşturup append ile ekleme yapılır bu her zaman listenin sonuna ekler
+pop her kullandığımda listenin son elemanı atılır
+
+LİSTELERDEN KUYRUK OLUŞTURMA
+kuyruk(queue):eleman ekleme işleminin listenin sonundan çıkarma işleminin listenin başından gerçekleştiği özel bir yapıdır.
+son giren-son çıkar(last in-last out)
+bunda da ekleme yapmak için append kullanılır tek fark çıkarma işlemi için pop fonksiyonuna bir argüman verilir
+pop(0) 0. indisi çıkar demek anlamına geliyor.
+#bir restoran kuyruğu için yapılan program
+L=[]
+while True:
+	isim=input('isim Giriniz..:')
+	L.append(isim)
+	if isim=='sıradaki':
+		print (L.pop (0))
+	if isim=='bitti':
+		break
