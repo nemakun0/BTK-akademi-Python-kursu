@@ -361,3 +361,84 @@ for a in range(1,11):
         print(a,"*",b,"=",a*b)
     print("\n")
 şeklinde bir kod bloğu bulunur.
+
+---FONKSİYONLAR---
+Fonksiyon: Programın belli işlevini (görevini)
+yerine getiren küçük program parçalarıdır.
+
+FONKSİYON TANIMLAMA
+print() gibi fonksiyonalr yerleşik fonksiyonlardır. 
+değişken adının yanında aç kapa parantez bulunuyorsa bu fonksiyon oludğunu gösterir.
+fonksiyon tanımlamak için def parametresi kullanılır
+def toplama():
+	print ("toplama iki veya daha fazla sayının toplanmasıdır.")
+	print("örneğin 5+7=12")
+bu bir fonksiyon tanımıdır.
+
+fonksiyonlara parametre verilebilir.
+bir restorana gelen kişilere selam veren bir program yazalım:
+
+def selamlama(isim):
+	print("sayın",isim,"restoranımıza hoşgeldiniz")
+while True:
+	ad=input("isminiz nedir?:")
+	if (ad=="dur"):
+		break
+	selamlama(ad)
+	
+selamlama fonksiyonu çağırılıp içine de kullanıcıdan aldığımız ad değişkenini parametre olarak tanımladım
+fonksiyonun parametresini varsayılan olarak bir değer yapabiliriz farklı bir değer verilmediği sürece bu değeri alakrak bize çıktı verir.
+
+RETURN()
+bir fonksiyonun döndürdüğü değerdir.
+ana fonksiyon içinden ulaşmak istediğimiz bir değer varsa bu ifadeyi kullanırız.
+
+FONKSİYONDA GLOBAL VE LOKAL DEĞİŞKEN
+yerel/lokal değişken: fonksiyon içinde tanumlanan ve fonksiyon dışında geçerliliği olmayan değişkenlerdir
+genel/global değişken: fonksiyonun dışında da geçerliliği olan değişkenlerdir.
+fonksiyon içinde tanımlı olan bir değişkeni globalde de kullanmak istiyorsam fonksiyonun içinde bunu belirtmem gerekir.
+def topla():
+	global a
+	a=5
+	b=6
+	return (a+b)
+print(topla())
+print(a)
+fonskiyonun içinde a'nın global bir değişken olduğunu belirtmiş olduk.
+global a =5 şeklinde bir tanımlama ise söz konusu olmaz global sadece bildiri yapmak için kullanılır.
+
+İÇERİĞİ OLMAYAN FONKSİYON
+fonksiyonu tanımlayıp içeriklerini sonra dolduracak olursam bu durumda bu durumda hata almamak için fonksiyonun içine pass veya boş return yazabilirim
+def topla():
+	global a
+	a=5
+	b=6
+	return (a+b)
+def carpma():
+	pass
+def cıkarma():
+	return
+print(topla())
+print(cıkarma())
+print(carpma())
+print(a)
+
+FONKSİYON KISALTMA(LAMBDA)
+tek satırlık bir fonksiyon tanımlayacaksak bunu kullanabiliriz.
+
+def dolar(TL):
+	return(TL/18)
+bunu bu şekilde yazmak yerine kısaca şöyle de yazabiliriz;
+dolar=lambda TL: TL/18
+
+ÖZYİNELEMELİ(REKÜRSİF) FONKSİYONLAR
+bir fonksiyonun içerisinde yine aynı fonksiyonu çağırırsak bu özyinelemeli fonksiyon olur.
+
+def ustel(a,b):
+	if b==0:
+		return 1
+	else:
+		return a*ustel(a,b-1)
+print (ustel(2,4))
+parametre:fonksiyonu tanımlarken parantez içine koyduğumuz.
+argüman:fonksiyonu çağırırken parantez içine koyduğumuz.
