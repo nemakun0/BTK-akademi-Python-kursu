@@ -692,3 +692,45 @@ while True:
 		print (L.pop (0))
 	if isim=='bitti':
 		break
+
+---SÖZLÜKLER---
+dizi gibi ancak ikişerli tanımalma söz konusudur. bu ikili birbiriyle ilişkilendirilebilir.
+sözlük oluşturulurken süslü parantez kullanlır ve ilişkili olan kelimeler arasına : konulur
+mevsim={"kış":1,"ilkbahar":2, "yaz":3,"sonbabahar":4}
+TC= dict([("talat",1234,),("ali"1335),("hasan"1365),("mehmet"1835)])
+boş sözlük nasıl doldurulur?
+s={}
+s[1]="bir"
+s[2]="iki"
+s[3]="üç"
+s[4]="dört"
+print(s)
+sözlük halinde gösterirlir.
+sözlüklerde anahatarlar kullanılır her bir anahtar tekil ve benzersiz olmalıdır üstteki dizide 1,2,3,4 numaraları birer anahtardır.
+
+SÖZLÜK FONKSİYONLARI
+s={'bir':1,'iki':2,'üç':3,'dört':4}
+s.get('bir',"yok")#girilen anahtar yapısının karşılığını gösterir. ikinci yazılan kısım ise mesajdır eğer aranan anahtar kelimenin bir karşılığı yoksa bunu yazdırır
+s.pop('üç')#üç anahtarına sahip olan kısmı sildi 
+s.keys()#sadece anahtar kelimelri gösterir
+s.values() # sadece değerleri ekrana yazdırır
+s['iki']# anahtarını girdğim değeri ekrana yazdırır
+s.items() #sözlüğü dict ile kurmuşum gibi parantezler halinde çıktı verir.
+
+KÜME(SET)
+süslü parantez içerisinde tanımlanabilir
+set() fonksiyonu ile tanımlanabilir
+k1={1,2,3,4,5}
+k2={1,2,6,8,9}
+iki kümeyi birleştirmek için:
+k1|k2 8 elemanlı bir küme yazdırır.
+iki kümenin kesişimi:
+k1&k2 iki kümenin ortak elemanlarını gösterir.
+iki kümenin farkı:
+k1-k2 #k1 in k2 den farklı elemanları nelerdir
+k2-k1# k2 nin k1 den farklı elemanları nelerdir.
+
+DEMET(TUPLE)
+parantez() kullanılarak tanımlama yapılır. veri tipi tuple'dır.
+tuple veri tipi liste gibi değiştirilemez tanımlama yapıldığı gibi kalır.
+hafızada listeye göre daha az yer kaplar. değiştirmek istemediğimiz şeylerde bunu kullanırız ki daha az yer kaplaması sebebiyle daha hızlı çalışan bir program oluşturur.
