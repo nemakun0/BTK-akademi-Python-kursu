@@ -442,3 +442,136 @@ def ustel(a,b):
 print (ustel(2,4))
 parametre:fonksiyonu tanımlarken parantez içine koyduğumuz.
 argüman:fonksiyonu çağırırken parantez içine koyduğumuz.
+
+---STRİNG İŞLEMLERİ---
+sting tanımlamalarında bir çok şey vardır:
+'' veya "" veya '''a''' şeklinde de olabilir.
+indis(sıra numarası)string bir ifadede her karakterin bir indiz numarası bulunur buna boşluklar da dahildir.
+isim="btk akademi" bir string ifadedir. burada toplam 11 tane karakter vardır ve bunların her birinin bir indis numarası vardır bu numaralar 0 dan başlar
+hangi indiste hangi harf olduğunu görmek için şöyle bir sorgulama yapabiliriz
+isim[7]
+>>>'d' şeklinde bir çıktı alırız. 
+string ifadelerin - indisleri de vardır. bu diğer indisin aksine solda sağa olacak şekilde değil sağdan sola olacak şekildedir ve ilk indis numarası 0 değil -1'dir 
+
+İKİ STRİNGİ BİRLEŞTİRME
+stringler + operatörü ile birleştirilebilir.
+örneğin:
+x='b'
+y='t'
+z='k'
+l= x+y+z
+print(l)
+
+>>>btk şeklinde bir çıktıya sahip olabilir ve bu harflerin her birinin indis numaralrı vardır.
+birleştirm işlemi yaparken boşluk bırakmaz bunun için sen ayrıca boşluk ifadesi ekleyebilirsin
+
+STRİNG BÖLME
+string bir ifadeyi bölmek için : işareti kullanılır.
+s="python" olsun bunu bölmek için;
+s[:]bu 0. indisten sona kadar olan bütün indisleri alarak ekrana yazdırır
+s[3:] 3. indis dahil olmak üzere 3 ten başlayarak sona kadar olan bütün indisleri alarak bir işlem yapar.
+çıktısı "hon" olur
+s[:3]0 dahil 3 e kadar olan karakterleri alırız
+çıktısı "pyt" olur
+s[1:5] 1. indisi dahil al 5 i alma 
+çıktısı "ytho" olur
+s[1::2] 1. indisten başla 2 şer artarak git 1 3 5 gibi indisleri al
+çıktısı "yhn" olur
+s[1:6:3] 1. indisten başkla 6. indise kadar git 3 er 3 er atlayarak git.
+çıktısı "yo" olur
+s[::-1] stringi tersten yazar
+çıktısı "nohtyp"
+aradan bir harf değiştirmek için;
+s="python"
+s2=s[:3]+"t"+s[4:]
+print (s2)
+>>>pytton
+bu şekilde 4. indisteki h harfini t harfi ile değiştrimiş oldum
+
+STRİNG GÜNCELLEME DEĞİŞTİRME
+adres="sultangazi-istanbul"
+adres2= "kadıköy"+adres[10:]
+print (adres2)
+>>> kadıköy-istanbul
+bu birinci değiştirme yöntemidir.
+bir diğer yöntem ise replace komutu kullanmaktır
+adres.replace("sultangazi","kadıköy") değiştirilmesini istediğim değeri ilk kısıma ne ile değiştirilmesini istersem o da ikinci kısıma yazılıyor .
+değişken.replace("eski string","yeni string")
+bunu değişkenin içeriğini değiştirmek için şu şekilde yazmalıyız.
+değişken=değişken.replace("eski string","yeni string")
+
+STRİNG SİLME
+yazi="python"
+yazi[:-1] sondan bir karakteri siler.kaç sayısını yazarsan o kadar karakter siler.
+#sayıları sondan başlayarak teker teker silen bir program yaptık
+yazi='Python'
+print (yazi)
+for x in range (1,7):
+	print (yazi [:-x])
+#sayıları baştan başlayarak teker teker silen bir program yaptık
+yazi='Python'
+
+for x in range (5,0,-1):#sondan 5 karakter silecek bir azaltılacak sondan 4 karakter silecek... 
+	print (yazi [:-x])
+print (yazi)
+
+STRİNGE FOR DÖNGÜSÜ İLE ERİŞME
+a=''
+s=0
+indis=int(input("indis degeri giriniz:"))
+for d in "btkakademi":
+	if s==indis:
+		a=d
+	s+=1
+print(a)
+istediğimiz indisteki harfi bu for döngüsüyle bulabiliriz.
+
+STRİNGİ LİSTEYE DÖNÜŞTÜRME
+cumle="okulu_çok_seviyorum"
+cumle.split("_")
+#burada _ koymamızın sebebi split için bir referans noktası oluşturmasıdır.
+split fonksiyonun default parametresi boşluktur () içine bir şey uazmazsan boşluklardan bölme işlemi yapar.
+
+STRİNG UZUNLUĞU BULMA
+string bir ifadenin karakter sayısını len() fonksiyonu ile öğrenebiliriz.
+cumle="merhaba nasılsınız?"
+len(cumle)#cümledeki her bir karakteri sayar 
+çıktısı: 19
+cümledeki herhengi bir harfi vey spesifik bir şeyi sayması için ise;
+cumle.count('ı')
+dersek cümle içerisindeki ı harflerini sayar ve çıktı olarak 3 döndürür
+
+STRİNG KARŞILAŞTIRMA
+"miranda"=="miranda"
+true döndürü
+"miranda" is "miranda"
+true
+"miranda"!="miranda" #eşit değildir olarak da kullanımı vardır.
+
+STRİNG İÇERİSİNE DEĞİŞKEN DEĞERİ YAZMA
+a="ile"
+string="ali{}veli"
+string.format(a)#süslü parantezle belirlenen yere format fonksşyonu ile istediğimiz değeri yazabiliriz. biz fonksiyona parametre olarak a değişkenini verdik bu durumda süslü parantezin olduğu bölgeye a= ile değişkennin yazacak.
+
+STRİNGİ TERS ÇEVİRME
+1.yöntem: 
+str1="btk"
+str1[::-1]
+>>>ktb
+2. yöntem:
+"".join(reversed(str1))#str1 yerine direk çevrilmesini istediğimiz metni de yazabiliriz değişken olması şart değildir. 
+başın akoyduğumu tırnak işaretleri ters çevirirken karakterlerin arasına ne koymak istediğimizi belirlememize yarar.
+biz içine hiçbir şey koymadık "." deseydik k.t.b şeklide bir çevirme işlemi uygulayacaktı.
+
+STRİNGİN HARFLERİNİ BÜYÜK/KÜÇÜK DÖNÜŞTÜRME
+s="büyükKÜÇÜK"
+s.lower()#şelinde hepsini küçük yazdırabiliriz ancak bu işlem değişkenin içini etkilemez değişkenin kendisini de bu şekilde değiştirmek istersek
+s=s.lower() şeklinde bir tanımlama yapabiliriz
+s.upper() kodu ise büyün harfleri büyük harfe dönüştürür.
+s.swapcase(): büyük harfleri küçüğe, küçük harfleri büyüğe çevirir.
+s.capitalize(): ilk harfi büyük yapar
+
+STRİNG İÇERİSİNDE BAŞKA STRİNG ARAMA
+"at" in "talat" #büyük küçük harf duyarlılığı vardır
+>>>true
+not in komutuyla da içinde olmayan bir ifade ile karşılaşıldığında true döndürür
