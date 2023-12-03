@@ -734,3 +734,94 @@ DEMET(TUPLE)
 parantez() kullanılarak tanımlama yapılır. veri tipi tuple'dır.
 tuple veri tipi liste gibi değiştirilemez tanımlama yapıldığı gibi kalır.
 hafızada listeye göre daha az yer kaplar. değiştirmek istemediğimiz şeylerde bunu kullanırız ki daha az yer kaplaması sebebiyle daha hızlı çalışan bir program oluşturur.
+
+---NESNE VE SINIF---
+
+SINIF(CLASS)TANIMLAMA
+class keyword'ü ile tanımlanır.
+class araba(marka):#buradaki parantezlerin kullanım zorunlu değildir
+	model = marka
+	def metot(self):#classın yaapcağı işlemler için bu fonksiyon tanımlandı ve buradaki parantez içi(self) aslında sınıfı gösterir
+	
+	SELF VE PASS
+	fonksiyonlar bir sınıfın altında yer aldıklarında metot olarak adlandırılır.
+	oluşturduğumuz classları hemen doldurmak zorunda değiliz süreç içerisinde doldurulabilir.
+	bunun için oluşturulan classın altına pass yazarak hata almadan yolumuza devam ederiz.
+	self: class içerisinde erişilecek elemanlar için kullanılır. nesnenin kendisine referans etmesini sağlar.
+	
+	NESNE (OBJECT) TANIMLAMA
+	bir sınıfı referans alarak türetilirler.
+	nesneAdı=sınıfAdı() şeklinde nesne tanımı yapabiliriz.
+	
+	nesne özellikleri:
+	class araba():
+    def __init__(self,model,marka,renk):#model,marka,renk metodumuzun parametreleri
+        self.model=model
+        self.marka=marka
+        self.renk=renk
+taksi=araba(2020,"fiat","sarı")#bir object oluşturup buna ait paramtreleri verdik
+print(taksi.model)#taksiye ait özelliklere bu şekilde ulaşabiliriz
+taksi.model=2013#bu şekilde taksiye ait özelliği değiştirebiliriz.
+burada yapılan değişiklikler classı etkilemez çünkü class genel tanımdır bunlar object özelinde değşiklik yapar.
+
+NESNE METOTLARI
+nesne tanımlama yaparken parametre yazmasak bile self yazmamız gerekir
+sınıf metotları ve fonksiyon farkları:
+1- fonksiyon direk çağrılabilirken  metot çağırmak için nesne ismi.metot ismi şeklinde çağırılır.
+2- metot tanımlamalarında self parametresini kullanırız.
+
+İNİT() METODU
+classların özelliklerine başlangıç değerleri init metodu ile atanır.
+class araba():
+    def __init__(self,model,marka,renk):#model,marka,renk metodumuzun parametreleri
+        self.model=model
+        self.marka=marka
+        self.renk=renk
+init metotu içerisinde return kullanılmaz
+
+NESNENİN METOT VE ÖZELLİKLERİ
+dir(nesneAdı)#nesnenin metoto ve özelliklerini bize getirir.
+_ olan metotlar python ın kendi metotlarıdır. _ li yazılmayanlar ise özeklliklerdir. sınıfa ait belirlenen özellikler.
+
+SINIF YAPILAR VE YENİ VERİ TİPLERİNİ TANIMLAMA
+sınıf oluşturduğumda bu yeni bir veri tipidir.
+
+KALITIM KAVRAMI
+Kalıtım:
+Kalıtım (inheritance), üst sınıfa ait olan
+özelliklerin altsınıflara miras olarak
+aktarılması özelliğidir. Böylece alt sınıf
+üst sınıfın özelliklerini taşır.
+class araba:#üst sınıf
+	def __init__(self,model,fiyat):
+		self.model=model
+		self.fiyat=fiyat
+		
+class kamyon(araba):#alt sınıf parametre sayesinde araba sınıfının içeriklerini kullanabiliriz.
+	pass
+
+MODÜL KAVRAMI
+py uzantılı dosyalar birer modüldür.
+bunları import edebiliriz. hem kendimiz oluşturabiliriz hemde python içerinde bulunabilir modüller.
+import ettiğimizde yazdığımız programın tamamına ulaşabiliriz ancak parça parça içerisindeki fonksiyonlara ulaşamayız.
+örneğin çevre ve alan bulan bir program yapmıştık import dediğimizde bizden girdi alıp alan ve çevreyi hesaplar ancak ben sadece çevreye ulaşmak istersem bununiçin şöyle bir şey yazmalıyım
+from programAdı import *
+from area and environment import *
+alan(8,3) şeklinde veya cevre(6,3) şeklinde içeriğindeki fonksiyonlara ulaşırız.
+yalnızca tek bir fonksiyonu istiyorsam
+from programAdı import fonkAdı
+import math,random #şeklinde birden fazla programı tek seferde ekleyebilirim.
+aktarma işlemi yaprken kısaltma yapabiliriz.
+import dikdortgenAlanı as dik gibi
+bu şekilde from kullanmadan içeriğe ulaşmak için
+import dikdortgenAlani as dik
+dik.cevre(2,35) böyle de içeriğe ulaşabiliriz.
+
+import şekilleri
+from math import sqrt
+şeklinde bütün math içeriklerini getirmek yerine sadece kullanacağımı getirerek hafızadan kazanç sağlarım
+from math import * :bütün içeriklerini getirir ancan math. şeklinde çağırmaya gerek olmaz.
+
+NAME ÖZELLİĞİ
+import dosya konumu olarak python ın kurulu olduğu yerde arama işlemi yapar. bu dosya konumunda yoksa sıkıntı çıkarır.
+__name__=='__main__' eğer programı çalıştırdığımızda bu true döndürürse programın kendisidir. başka bir programın içine import ettiysek false döndürür.
