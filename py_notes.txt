@@ -825,3 +825,24 @@ from math import * :bütün içeriklerini getirir ancan math. şeklinde çağır
 NAME ÖZELLİĞİ
 import dosya konumu olarak python ın kurulu olduğu yerde arama işlemi yapar. bu dosya konumunda yoksa sıkıntı çıkarır.
 __name__=='__main__' eğer programı çalıştırdığımızda bu true döndürürse programın kendisidir. başka bir programın içine import ettiysek false döndürür.
+
+MATEMATİKSEL İŞLEM FONKSİYONLARI
+abs(): mutlak değerini alan foksiyon
+round() :yuvarlama işlemi yapan fonksiyon
+bin(): binary sayı sistemine dönüştürür.
+hex(): hexadecimal sayı sistemine dönüştürür
+chr(): ASCII koduna dönüştürür.
+gcd(): ortak bölenlerin en büyüğü bunu math ile kullanmak gerekir.mathimport edilecek ve math.gcd şekilinde tanımlanır.
+
+RASTGELE MODÜLÜ METOTOLARI
+random import edilmeli. random.random() 0 ile 1 arasında bir sayı üretir.
+girdiğim aralıkta integer bir değer üretmesini istiyorsam;
+random.randint(2,9)  2 ile 9 arasında integer bir değer döndürür.
+random.randrange(1,13,2) 2'şerli 2 şerli atlayarak bir değer üretecek 1 3 5 7 9 11 gibi
+random.uniform()iki değer arasında float bir sayı üretir. (10,11) arasında üretir gibi
+liste içerisindn de seçim yaptırma şansım var bir ;
+random.cohice([....]) listenin içeriklerinden birisini rastgele seçerek ekrana yazdırır.
+listeyi ayrı tanımlayıp random.cohice(listeAdı) şeklinde yapılabilir.
+random.shuffle(listeAdı) bu da verdiğimiz listenin sırasını karıştırarak bize dönüş yapar.
+random.sample(listeAdı,kaç eleman istediğin) yani random.sample(liste,3) gibi
+
