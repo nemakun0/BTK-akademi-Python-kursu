@@ -901,3 +901,51 @@ RESİM YÜKLEME
 gif uzantılı resim yükleyebiliriz.
 gif uzantılı yapmak için paintte açıp hem pixsel uzunluklarını öğrenebilir hem de farklı kaydet kısmından gif formatıyla kaydedebilirsin.
 bu kaydetme işlemini python ın kurulu olduğu dosyaya kaydetmen gerekir
+
+---OLAY TABANLI PROJELER---
+olaya bağlı turtle kullanımı
+olay(event)
+onclick(f): Fare (mouse) butonu tiklandığında "f" fonksiyonunu çağırır.
+onscreenclick(f):Fare (mouse) butonu tiklandığında "f" fonksiyonunu çağırır. 
+
+onrelease(f):Fare (mouse) butonu bırakıldığında "f" fonksiyonunu çağırır.
+
+ondrag (f):Fare (mouse) sürüklemesi olduğunda "f" fonksiyonunu çağırır.
+
+listen():Tuş olaylarını yakalamak için turtle ekranını dinler
+
+onkey(f,tus):ilgili klavye tuşu bırakıldığında "f"fonksiyonunu çağırır.
+onkeyrelease(f,tus): ilgili klavye tuşu bırakıldığında "f"fonksiyonunu çağırır.
+
+onkeypress(f,tus): ilgili klavye tuşuna basıldığında "f" isimli fonksiyonu çalıştırır.
+
+ontimer(f,t):t milisaniye sonra "f" isimli bir fonksiyonu çağıracak sayaç kurar.
+
+mainloop()| done() :Olay yakalama döngüsünü başlatır. 
+
+exitonclick():fareye tıklandığında bye()fonksiyonu çağırır.
+
+textinput("başlık",mesaj):Bir iletişim kutusu içerisine sitring tipte veri girilmesini bekler.
+
+numinput("başlık","mesaj"): Bir iletişim kutusu içerisine float tipte veri girilmesini bekler.
+
+write():ekrana yazı yazar
+
+delay(): milisaniye cinsinden çizim hareketleri arasındakı gecikmeyi ayarlar.
+
+tracer(n,delay):Animasyon ayarlarını değiştirir. Çizimleri animasyonsuz yapmak için tracer(0) kullanılır
+n kez ekranı yeniler.
+
+update():çizim ekranını günceller.
+
+distance():Kaplumbağanın konumu ile bilgileri verilen başka bir nokta yada bir turtle nesnesi ile arasındaki mesafeyi verir.
+
+YILAN OYUNU
+NESNELER
+yılan
+kuyruk
+yem
+FONKSİYONLAR
+ye()
+çarpma()
+ilkAyar()
