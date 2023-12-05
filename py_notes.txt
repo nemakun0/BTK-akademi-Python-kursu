@@ -846,3 +846,58 @@ listeyi ayrı tanımlayıp random.cohice(listeAdı) şeklinde yapılabilir.
 random.shuffle(listeAdı) bu da verdiğimiz listenin sırasını karıştırarak bize dönüş yapar.
 random.sample(listeAdı,kaç eleman istediğin) yani random.sample(liste,3) gibi
 
+---TURTLE İLE ÇİZİM UYGULAMLARI---
+Piksel, bir ekranda oluşan görüntüde insan
+gözünün ayırt edebileceği en küçük birimdir.
+Aslında pikseller; kırmızı, mavi ve yeşil renkteki
+alt piksellerden (sub-pixel) meydana gelir ancak
+insan gözünün bunu görmesi mümkün değildir.
+turtle import edilmeli
+bulunduğumuz pozisyonu öğrenmek için;
+turtle.position()
+turtle.pos()
+bir kordinata gitmek için;
+turtle.goto(100,100)
+turtle.setposition(-50,-50)
+turtle.setpos(0,0)
+tam ortaya dönmek için;
+turtle.reset() #0,0 noktası tam ortadır.
+turtle.home() 
+sadece x parametresini değiştirmek için;
+turtle.setx()
+sadece y parametresini değiştirmek için;
+turtle.sety()
+ileri gitme fonksiyonları;
+turtle.forward()
+turtle.fd()
+geri gitme fonksiyonları;
+turtle.backward()
+turtle.bk
+sağa dönme fonksiyonları;
+turtle.right()#argüman olarak açı derecesi verilir.
+sola dönme fonksiyonları;
+turtle.left()#argüman olarak açı derecesi verilir.
+
+turtle içerisinde hangi şekiller olduğunu 
+turtle.getshapes() fonksiyonunu yazdırarak görebiliriz.
+kare, yuvarlak, ok, kaplumbağa gibi simgeler yapabilirisin
+hiç görünmesin istersen turtle.hideturtle() fonksiyonu kullanabilirsin
+kaybolan simgeyi göstermek için turtle.showturtle() fonksiyonu kullanabilirsin.
+
+RENK KOMUTLARI
+color(kalem rengi,dolgu rengi)
+colormode(255)# rengi ben kendim belirleyeceğim demek için yazarız bunu
+color(red,green,blue)
+circle(100)#saat yönünün tersine çizer
+circle(-100)#saat yönünde çizer
+
+VERİ GİRİŞİ İÇİN İLETİŞİM KUTULARINI KULLANMA
+numinput():string girişi alır biz bunu int e çevirebiliriz.
+numinput("poligon","kenar sayısı",5) buradaki 5 başlangıç değeridir.
+bu işlem bize bir kutu çıkarıyor küçük bir sekme açıyor gibi düşünebiliriz.
+ilk girdiğim parametre sekme adı gibi oluyor ikinci parametre kutucuğun adı olarak kutucuğun üstünde çıkıyor. ve bir değer girmeni bekliyor.
+
+RESİM YÜKLEME
+gif uzantılı resim yükleyebiliriz.
+gif uzantılı yapmak için paintte açıp hem pixsel uzunluklarını öğrenebilir hem de farklı kaydet kısmından gif formatıyla kaydedebilirsin.
+bu kaydetme işlemini python ın kurulu olduğu dosyaya kaydetmen gerekir
